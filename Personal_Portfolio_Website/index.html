@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himanshu Panwar — Full Stack Enthusiast</title>
+<meta name="description" content="Himanshu Panwar — Computer Science undergraduate & full stack developer building with React, Node.js, MongoDB and Java.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo" aria-label="Himanshu Panwar, home">
+      <span class="nav__logo-bracket">&lt;</span>HP<span class="nav__logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav__tabs" aria-label="Primary">
+      <a href="#home" class="nav__tab is-active" data-tab>home<span class="nav__tab-ext">.js</span></a>
+      <a href="#about" class="nav__tab" data-tab>about<span class="nav__tab-ext">.md</span></a>
+      <a href="#skills" class="nav__tab" data-tab>skills<span class="nav__tab-ext">.json</span></a>
+      <a href="#experience" class="nav__tab" data-tab>experience<span class="nav__tab-ext">.log</span></a>
+      <a href="#projects" class="nav__tab" data-tab>projects<span class="nav__tab-ext">.md</span></a>
+      <a href="#education" class="nav__tab" data-tab>education<span class="nav__tab-ext">.db</span></a>
+      <a href="#contact" class="nav__tab" data-tab>contact<span class="nav__tab-ext">.sh</span></a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__inner">
+
+    <div class="terminal" role="img" aria-label="Terminal window introducing Himanshu Panwar">
+      <div class="terminal__bar">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+        <span class="terminal__title">himanshu@portfolio: ~</span>
+      </div>
+      <div class="terminal__body" id="terminalBody">
+        <p class="terminal__line"><span class="prompt">$</span> <span id="typedCommand"></span></p>
+        <div id="typedOutput" class="terminal__output"></div>
+      </div>
+    </div>
+
+    <div class="hero__copy">
+      <p class="hero__eyebrow">// full stack enthusiast · open to internships</p>
+      <h1 class="hero__title">Himanshu Panwar</h1>
+      <p class="hero__subtitle">
+        Building with <span class="hl">React.js</span>, <span class="hl">Node.js</span> &amp; <span class="hl">MongoDB</span> —
+        while going deep on DSA, Systems &amp; GATE prep. CSE undergrad @ South Asian University.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      </div>
+      <div class="hero__meta">
+        <span>📍 Greater Delhi Area</span>
+        <span class="dotsep">•</span>
+        <span class="status"><i class="status__dot"></i> open to internships</span>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+    <span></span>
+  </a>
+</section>
+
+<section class="section" id="about">
+  <div class="section__inner">
+    <p class="section__path">~/about</p>
+    <h2 class="section__title">Who I Am</h2>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>Computer Science undergraduate focused on building strong core fundamentals in <strong>Data Structures, Algorithms, Operating Systems</strong> and <strong>System Design</strong>. I believe long-term success in tech comes from discipline, depth and consistency — not shortcuts.</p>
+        <p>Currently working on web development projects and strengthening problem-solving skills, while preparing for competitive exams like <strong>GATE</strong> as a parallel track. Actively exploring off-campus internships and high-impact tech opportunities.</p>
+        <p>Learning German alongside technical preparation to align my academic and career goals internationally. Driven by growth, clarity and execution. <em>Always building. Always improving.</em></p>
+        <p class="about__callout">If you're into building real things, sharing ideas, and growing through collaboration — I'm always up for a good conversation.</p>
+      </div>
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__num">6</span>
+          <span class="stat__label">projects shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">5</span>
+          <span class="stat__label">internships / roles</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">8.69</span>
+          <span class="stat__label">CGPA (sem 2)</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">2030</span>
+          <span class="stat__label">expected graduation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="skills">
+  <div class="section__inner">
+    <p class="section__path">~/skills</p>
+    <h2 class="section__title">Tech Stack &amp; Skills</h2>
+
+    <div class="skills__groups">
+      <div class="skill-group">
+        <h3 class="skill-group__title"><span class="skill-group__key">"core"</span>:</h3>
+        <div class="skill-chips">
+          <span class="chip chip--top">Data Structures</span>
+          <span class="chip chip--top">C</span>
+          <span class="chip chip--top">Python</span>
+          <span class="chip chip--top">MySQL</span>
+          <span class="chip chip--top">Problem Solving</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group__title"><span class="skill-group__key">"web_dev"</span>:</h3>
+        <div class="skill-chips">
+          <span class="chip">React.js</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Java</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group__title"><span class="skill-group__key">"practices"</span>:</h3>
+        <div class="skill-chips">
+          <span class="chip">Git &amp; GitHub</span>
+          <span class="chip">Open Source</span>
+          <span class="chip">Algorithms</span>
+          <span class="chip">System Design (learning)</span>
+        </div>
+      </div>
+    </div>
+    <p class="skills__note">// ★ marks LinkedIn top skills</p>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section__inner">
+    <p class="section__path">~/experience --log</p>
+    <h2 class="section__title">Experience</h2>
+
+    <ol class="timeline">
+      <li class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <div class="timeline__head">
+            <h3>Frontend Developer</h3>
+            <span class="timeline__date">Jul 2026 – Present</span>
+          </div>
+          <p class="timeline__org">QSkill · Internship · Remote, Delhi</p>
+          <p class="timeline__desc">Building practical front-end skills through real-world projects as part of the QSkill Front End Development internship program.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <div class="timeline__head">
+            <h3>Frontend Developer</h3>
+            <span class="timeline__date">Jun 2026 – Present</span>
+          </div>
+          <p class="timeline__org">Zetheta Algorithms Pvt Ltd · Internship · New Delhi</p>
+          <p class="timeline__desc">Contributing to fintech-focused web applications: a real-time stock screener, a multi-step loan application form, a portfolio analytics dashboard, and an interactive financial education module builder.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <div class="timeline__head">
+            <h3>Java Development Intern</h3>
+            <span class="timeline__date">Jun 2026 – Present</span>
+          </div>
+          <p class="timeline__org">SaiKet Systems · Internship · Remote, Delhi</p>
+          <p class="timeline__desc">Developing Java applications, debugging code, and collaborating on software projects to strengthen core software engineering skills.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <div class="timeline__head">
+            <h3>Contributor — ECSoC 2026</h3>
+            <span class="timeline__date">Jul 2026 – Present</span>
+          </div>
+          <p class="timeline__org">Elite Coders · Part-time · Remote</p>
+          <p class="timeline__desc">Verified contributor for Elite Coders Summer of Code, collaborating on open-source projects and writing clean, scalable code.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <div class="timeline__head">
+            <h3>Campus Ambassador</h3>
+            <span class="timeline__date">Jun 2026 – Present</span>
+          </div>
+          <p class="timeline__org">CampusCrew · Part-time · Remote, Delhi</p>
+          <p class="timeline__desc">Promoting student opportunities and building communication, networking and leadership skills through campus outreach.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt" id="projects">
+  <div class="section__inner">
+    <p class="section__path">~/projects</p>
+    <h2 class="section__title">Featured Work</h2>
+
+    <div class="projects__featured">
+      <article class="project-card project-card--featured">
+        <div class="project-card__top">
+          <span class="project-card__tag">hackathon · IIT Bombay DevFusion</span>
+          <span class="project-card__date">Apr 2026 – Present</span>
+        </div>
+        <h3>MediTrack — Skip the Wait. Smart Care.</h3>
+        <p>A full-stack medical platform connecting patients, doctors and admins on one screen. Patients book appointments and track queues in real time; doctors manage availability and run video consultations; admins oversee the whole system from one dashboard — plus an AI symptom checker powered by the Gemini API.</p>
+        <ul class="project-card__points">
+          <li>Real-time queue tracking &amp; appointment booking</li>
+          <li>AI-powered symptom checker (Google Gemini API)</li>
+          <li>Real-time video consultations</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="chip chip--sm">React.js</span>
+          <span class="chip chip--sm">Node.js</span>
+          <span class="chip chip--sm">Express.js</span>
+          <span class="chip chip--sm">MongoDB</span>
+          <span class="chip chip--sm">Socket.io</span>
+          <span class="chip chip--sm">WebRTC</span>
+          <span class="chip chip--sm">Gemini API</span>
+          <span class="chip chip--sm">JWT Auth</span>
+        </div>
+        <a href="https://github.com/himaaaanshuuuuu/meditrack" target="_blank" rel="noopener" class="project-card__link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card project-card--featured">
+        <div class="project-card__top">
+          <span class="project-card__tag">research</span>
+          <span class="project-card__date">Dec 2025 – Feb 2026</span>
+        </div>
+        <h3>Trust Modeling in Online Networks using Type-2 Fuzzy Logic</h3>
+        <p>Research-oriented project modeling trust evolution in online information networks. Implemented experimental simulations in Python notebooks to analyze trust dynamics, parameter variations and system behavior — with hands-on exposure to fuzzy systems and uncertainty modeling.</p>
+        <ul class="project-card__points">
+          <li>Experiment execution &amp; result analysis</li>
+          <li>Structured documentation for reproducibility</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="chip chip--sm">Python</span>
+          <span class="chip chip--sm">Fuzzy Logic</span>
+        </div>
+        <a href="https://github.com/himaaaanshuuuuu" target="_blank" rel="noopener" class="project-card__link">View on GitHub →</a>
+      </article>
+    </div>
+
+    <div class="projects__grid">
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__date">Mar 2026</span>
+        </div>
+        <h3>Global Rasoi</h3>
+        <p>A multi-page website showcasing recipes and cuisines from around the world, built with semantic HTML and organized CSS.</p>
+        <div class="project-card__stack">
+          <span class="chip chip--sm">HTML5</span>
+          <span class="chip chip--sm">CSS3</span>
+        </div>
+        <a href="https://github.com/himaaaanshuuuuu/recipe-website" target="_blank" rel="noopener" class="project-card__link">GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__date">Mar 2026</span>
+        </div>
+        <h3>My Tech Blog</h3>
+        <p>A personal blogging website built for CS106 – Fundamentals of Web Design, demonstrating CSS layout systems and responsive design across multiple pages.</p>
+        <div class="project-card__stack">
+          <span class="chip chip--sm">HTML5</span>
+          <span class="chip chip--sm">CSS3</span>
+        </div>
+        <a href="https://github.com/himaaaanshuuuuu/blog-site" target="_blank" rel="noopener" class="project-card__link">GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__date">Feb 2026</span>
+        </div>
+        <h3>MikiWiki Project</h3>
+        <p>An HTML-based mini wiki on the Iranian Revolution, presenting key events, figures and causes with structured pages and simple navigation.</p>
+        <div class="project-card__stack">
+          <span class="chip chip--sm">HTML5</span>
+          <span class="chip chip--sm">CSS3</span>
+        </div>
+        <a href="https://github.com/himaaaanshuuuuu/MiniWiki_Project" target="_blank" rel="noopener" class="project-card__link">GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__date">Apr 2026</span>
+        </div>
+        <h3>JavaScript Implementation</h3>
+        <p>Six logic-based problems solved using prompt and alert, focused on loops, conditionals and clean beginner-friendly problem solving.</p>
+        <div class="project-card__stack">
+          <span class="chip chip--sm">JavaScript</span>
+        </div>
+        <a href="https://github.com/himaaaanshuuuuu/JS-Assignment" target="_blank" rel="noopener" class="project-card__link">GitHub →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="section__inner">
+    <p class="section__path">~/education --query</p>
+    <h2 class="section__title">Education</h2>
+
+    <div class="edu-cards">
+      <div class="edu-card">
+        <div class="edu-card__head">
+          <h3>South Asian University</h3>
+          <span class="edu-card__grade">8.69 CGPA</span>
+        </div>
+        <p class="edu-card__degree">BTech–MTech, Computer Science Engineering</p>
+        <p class="edu-card__date">Aug 2025 – Aug 2030</p>
+        <p class="edu-card__desc">Currently focused on core CS fundamentals, problem solving, and off-campus career growth. Preparing for GATE and global master's opportunities.</p>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-card__head">
+          <h3>Kendriya Vidyalaya (KV)</h3>
+          <span class="edu-card__grade">93.8%</span>
+        </div>
+        <p class="edu-card__degree">High School — Mathematics &amp; Computer Science</p>
+        <p class="edu-card__date">Apr 2015 – May 2023</p>
+        <p class="edu-card__desc">Graduated with 90+ in all 5 subjects. Elected House Captain twice; served as Co-curricular Activities Head and Class Representative (Grades 7–12). Active in debates, arts, literature, Olympiads, science quizzes and Scouts &amp; Guides.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="contact">
+  <div class="section__inner">
+    <p class="section__path">~/contact</p>
+    <h2 class="section__title">Let's Build Something</h2>
+    <p class="contact__intro">Open to internships, collaborations, and good conversations about code. Try the terminal below, or just reach out directly.</p>
+
+    <div class="contact__layout">
+      <div class="terminal terminal--interactive">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal__title">contact.sh</span>
+        </div>
+        <div class="terminal__body terminal__body--interactive" id="interactiveLog">
+          <p class="terminal__output-line">Type <code>help</code> to see available commands.</p>
+        </div>
+        <div class="terminal__input-row">
+          <span class="prompt">$</span>
+          <input type="text" id="terminalInput" class="terminal__input" placeholder="type a command..." autocomplete="off" aria-label="Terminal command input">
+        </div>
+      </div>
+
+      <div class="contact__cards">
+        <a href="mailto:himaaaanshuuuuu@gmail.com" class="contact-card">
+          <span class="contact-card__icon">✉</span>
+          <span class="contact-card__label">Email</span>
+          <span class="contact-card__value">himaaaanshuuuuu@gmail.com</span>
+        </a>
+        <a href="https://github.com/himaaaanshuuuuu" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">⌥</span>
+          <span class="contact-card__label">GitHub</span>
+          <span class="contact-card__value">@himaaaanshuuuuu</span>
+        </a>
+        <a href="https://www.linkedin.com/in/himanshu-panwar-3ba399313/" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">in</span>
+          <span class="contact-card__label">LinkedIn</span>
+          <span class="contact-card__value">himanshu-panwar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Designed &amp; built by Himanshu Panwar · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
