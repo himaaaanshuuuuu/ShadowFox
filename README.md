@@ -30,11 +30,6 @@ As a Computer Science Engineering student, I am passionate about building respon
 
 ---
 
-```
-```
-
----
-
 ## Projects
 
 ### Beginner Level
