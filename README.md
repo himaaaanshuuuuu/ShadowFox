@@ -33,17 +33,6 @@ As a Computer Science Engineering student, I am passionate about building respon
 ## Repository Structure
 
 ```
-ShadowFox/
-│
-├── Personal Portfolio Website/
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│   └── assets/
-│
-├── Task 2/
-├── Task 3/
-└── README.md
 ```
 
 ---
