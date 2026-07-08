@@ -63,7 +63,6 @@ A responsive personal portfolio website developed using HTML, CSS, and JavaScrip
 - About section
 - Skills section
 - Projects showcase
-- Resume section
 - Contact information
 - Smooth navigation
 
