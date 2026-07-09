@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whistle Podu | Chennai Super Kings Fan Hub</title>
+<meta name="description" content="An unofficial fan hub for Chennai Super Kings — schedule, squad, stats, news and the Yellove fan zone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="floodlight-layer" aria-hidden="true">
+  <span class="beam beam-1"></span>
+  <span class="beam beam-2"></span>
+  <span class="beam beam-3"></span>
+</div>
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34">
+          <polygon points="24,3 30,18 46,18 33,28 38,44 24,34 10,44 15,28 2,18 18,18" fill="var(--yellow)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>CSK</strong>
+        <em>Yellove Hub</em>
+      </span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#schedule">Schedule</a>
+      <a href="#squad">Squad</a>
+      <a href="#stats">Stats</a>
+      <a href="#news">News</a>
+      <a href="#fanzone">Fan Zone</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Chennai Super Kings &middot; Est. 2008</p>
+        <h1 class="hero-title">WHISTLE<br><span>PODU</span></h1>
+        <p class="hero-sub">The unofficial home ground for every Yellove fan — schedules, squad intel, stats and the roar of Chepauk, in one place.</p>
+        <div class="hero-cta">
+          <a href="#schedule" class="btn btn-primary">Next Match</a>
+          <a href="#fanzone" class="btn btn-ghost">Join Fan Zone</a>
+        </div>
+      </div>
+      <div class="scoreboard" aria-label="CSK IPL titles won">
+        <div class="scoreboard-head">TITLES ON THE BOARD</div>
+        <div class="scoreboard-digit" id="titleDigit">5</div>
+        <ul class="scoreboard-years">
+          <li>2010</li><li>2011</li><li>2018</li><li>2021</li><li>2023</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ticker" role="status" aria-live="polite">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </section>
+  <section class="section" id="schedule">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Fixtures</p>
+        <h2>Match Schedule</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Match filter">
+        <button class="tab is-active" data-filter="upcoming" role="tab" aria-selected="true">Upcoming</button>
+        <button class="tab" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+      <div class="fixture-list" id="fixtureList"></div>
+    </div>
+  </section>
+  <section class="section section-alt" id="squad">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Roster</p>
+        <h2>Squad</h2>
+      </div>
+      <div class="squad-filters" id="squadFilters">
+        <button class="chip is-active" data-role="all">All</button>
+        <button class="chip" data-role="Batter">Batters</button>
+        <button class="chip" data-role="Bowler">Bowlers</button>
+        <button class="chip" data-role="All-rounder">All-rounders</button>
+        <button class="chip" data-role="Wicketkeeper">Keepers</button>
+      </div>
+      <div class="squad-grid" id="squadGrid"></div>
+    </div>
+  </section>
+  <section class="section" id="stats">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Numbers</p>
+        <h2>Team Stats</h2>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-num" data-count="253">0</span>
+          <span class="stat-label">Matches Played</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-count="150">0</span>
+          <span class="stat-label">Matches Won</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-count="59" data-suffix="%">0</span>
+          <span class="stat-label">Win Percentage</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-count="5">0</span>
+          <span class="stat-label">IPL Titles</span>
+        </div>
+      </div>
+      <div class="leaderboard-grid">
+        <div class="leaderboard">
+          <h3>Top Run Scorers <span>All-time, CSK</span></h3>
+          <ol id="runsBoard"></ol>
+        </div>
+        <div class="leaderboard">
+          <h3>Top Wicket Takers <span>All-time, CSK</span></h3>
+          <ol id="wicketsBoard"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt" id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Dugout Dispatch</p>
+        <h2>Latest News</h2>
+      </div>
+      <div class="news-grid" id="newsGrid"></div>
+    </div>
+  </section>
+  <section class="section" id="fanzone">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Yellove Army</p>
+        <h2>Fan Zone</h2>
+      </div>
+      <div class="fanzone-grid">
+        <div class="panel poll-panel">
+          <h3>Fan Poll</h3>
+          <p class="panel-sub" id="pollQuestion">Who should open the innings alongside Gaikwad?</p>
+          <form id="pollForm" class="poll-options"></form>
+          <p class="poll-total" id="pollTotal"></p>
+        </div>
+        <div class="panel forum-panel">
+          <h3>Forum &middot; Recent Threads</h3>
+          <ul class="forum-list" id="forumList"></ul>
+          <button class="btn btn-ghost btn-small" id="newThreadBtn" type="button">Start a Thread</button>
+        </div>
+      </div>
+
+      <div class="panel social-panel">
+        <h3>Follow the Roar</h3>
+        <p class="panel-sub">Live feeds, straight from the official accounts.</p>
+        <div class="social-tabs" id="socialTabs">
+          <button class="social-tab is-active" data-net="twitter">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.6-7.3L4.2 22H1l8.1-9.3L.9 2H8.2l5.1 6.7L18.9 2zm-1.2 18h1.9L7.4 4H5.3l12.4 16z"/></svg>
+            X / Twitter
+          </button>
+          <button class="social-tab" data-net="youtube">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.6 15.5v-7l6.3 3.5-6.3 3.5z"/></svg>
+            YouTube
+          </button>
+          <button class="social-tab" data-net="facebook">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.5 22v-8.5h2.9l.4-3.4h-3.3V7.9c0-1 .3-1.6 1.7-1.6h1.8V3.3c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.4H7v3.4h3v8.5h3.5z"/></svg>
+            Facebook
+          </button>
+          <button class="social-tab" data-net="instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53C6.09.28 6.82.11 7.88.06 8.94.01 9.3 0 12 0zm0 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm7.2-2.9a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg>
+            Instagram
+          </button>
+        </div>
+
+        <div class="social-embed" id="embedTwitter">
+          <a class="twitter-timeline" data-height="420" data-theme="dark" href="https://twitter.com/ChennaiIPL?ref_src=twsrc%5Etfw">Tweets by ChennaiIPL</a>
+        </div>
+
+        <div class="social-embed" id="embedYoutube" hidden>
+          <iframe width="100%" height="420" src="https://www.youtube.com/embed?listType=user_uploads&list=UC2J_VKrAzOEJuQvFFtj3KUw" title="Chennai Super Kings YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="social-embed" id="embedFacebook" hidden>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FChennaiIPL&tabs=timeline&width=500&height=420&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" width="100%" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+
+        <div class="social-embed embed-fallback" id="embedInstagram" hidden>
+          <p>Instagram's live feed requires the official Meta Graph API access token, which only the CSK account owner can issue.</p>
+          <a href="https://instagram.com/chennaiipl" target="_blank" rel="noopener" class="btn btn-ghost btn-small">Open @chennaiipl on Instagram</a>
+        </div>
+
+        <p class="panel-note">This is a fan-made hub, not an official CSK or BCCI/IPL property.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="brand-text"><strong>CSK</strong><em>Yellove Hub</em></span>
+      <p>Made by a fan, for the fans. Whistle Podu! 🦁</p>
+    </div>
+    <div class="footer-links">
+      <a href="#schedule">Schedule</a>
+      <a href="#squad">Squad</a>
+      <a href="#stats">Stats</a>
+      <a href="#news">News</a>
+      <a href="#fanzone">Fan Zone</a>
+    </div>
+  </div>
+  <p class="footer-legal">Unofficial fan project. Team names and marks belong to their respective owners. Stats are illustrative and may not reflect the latest official figures.</p>
+</footer>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
